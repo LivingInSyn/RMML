@@ -1,5 +1,5 @@
 RMMs:
-  #TeamViewer
+  # TeamViewer
   TeamViewer:
     Executables:
       Windows:
@@ -14,7 +14,29 @@ RMMs:
         - "*.teamviewer.com"
       Ports:
         - 5938
-  #AnyDesk
+  # NinjaRMM
+  NinjaRMM:
+    Executables:
+      Windows:
+        - NinjaRMMAgentPatcher.exe
+        - ninjarmm-cli.exe
+        - NinjaRMMAgent.exe
+      MacOS:
+      Linux:
+    NetConn:
+      Domains:
+        - "*.ninjarmm.com"
+        - "*.ninjarmm.net"
+        - "*.rmmservice.com"
+        - "https://ninjauploads.s3.amazonaws.com/app.ninjarmm.com*"
+        - "http://ninjaresources.s3.amazonaws.com/AgentBinaries/patchmgmt/"
+        - "https://ninjabuilds.s3.amazonaws.com/"
+        - "http://s3-us-west-2.amazonaws.com/"
+        - "sentry.io*"
+      Ports:
+        - 80
+        - 443
+  # AnyDesk
   AnyDesk:
     Executables:
       Windows:
