@@ -1,0 +1,25 @@
+RMMs:
+  #TeamViewer
+  TeamViewer:
+    Executables:
+      Windows:
+        - "TeamViewer.exe"
+        - "TeamViewer_Setup.exe"
+      MacOS:
+        - "TeamViewer"
+      Linux:
+        - "TeamViewer"
+    NetConn:
+      Domains:
+        - "*.teamviewer.com"
+      Ports:
+        - 5938
+  #AnyDesk
+  AnyDesk:
+    Executables:
+      Windows:
+      MacOS:
+      Linux:
+    NetConn:
+      Domains:
+      Ports:
