@@ -1,3 +1,4 @@
+---
 RMMs:
   # TeamViewer
   TeamViewer:
@@ -43,6 +44,8 @@ RMMs:
   # AnyDesk
   AnyDesk:
     Executables:
+      SignerSubjectName:
+      MacOSSigner:
       Windows:
       MacOS:
       Linux:
