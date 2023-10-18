@@ -21,7 +21,7 @@ RMMs:
   NinjaRMM:
     Executables:
       SignerSubjectName: NinjaRMM, LLC
-      MacOSSigner: NinjaRMM LLC (EBNT3ZX97E)
+      MacOSSigner: "Developer ID Application: NinjaRMM LLC (EBNT3ZX97E)"
       Windows:
         - NinjaRMMAgentPatcher.exe
         - ninjarmm-cli.exe
