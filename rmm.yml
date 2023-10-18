@@ -2,6 +2,7 @@ RMMs:
   # TeamViewer
   TeamViewer:
     Executables:
+      SignerSubjectName: TeamViewer GmbH
       Windows:
         - "TeamViewer.exe"
         - "TeamViewer_Setup.exe"
@@ -17,6 +18,7 @@ RMMs:
   # NinjaRMM
   NinjaRMM:
     Executables:
+      SignerSubjectName: Atera Networks Ltd
       Windows:
         - NinjaRMMAgentPatcher.exe
         - ninjarmm-cli.exe
