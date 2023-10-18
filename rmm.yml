@@ -3,6 +3,7 @@ RMMs:
   TeamViewer:
     Executables:
       SignerSubjectName: TeamViewer GmbH
+      MacOSSigner:
       Windows:
         - "TeamViewer.exe"
         - "TeamViewer_Setup.exe"
@@ -18,7 +19,8 @@ RMMs:
   # NinjaRMM
   NinjaRMM:
     Executables:
-      SignerSubjectName: Atera Networks Ltd
+      SignerSubjectName: NinjaRMM, LLC
+      MacOSSigner: NinjaRMM LLC (EBNT3ZX97E)
       Windows:
         - NinjaRMMAgentPatcher.exe
         - ninjarmm-cli.exe
@@ -47,3 +49,41 @@ RMMs:
     NetConn:
       Domains:
       Ports:
+  # Atera
+  Atera:
+    Executables:
+      SignerSubjectName: Atera Networks Ltd
+      MacOSSigner:
+      Windows:
+        - AteraAgent.exe
+        - AgentPackageNetworkDiscoveryWG.exe
+        - AgentPackageAgentInformation.exe
+        - AgentPackageSTRemote.exe
+        - AgentPackageFileExplorer.exe
+        - AgentPackageMonitoring.exe
+        - AgentPackageRuntimeInstaller.exe
+      MacOS:
+        - ninjarmm-macagent
+      Linux:
+    NetConn:
+      Domains:
+        - pubsub.atera.com
+        - pubsub.pubnub.com
+        - agentreporting.atera.com
+        - app.atera.com
+        - agenthb.atera.com
+        - packagesstore.blob.core.windows.net
+        - ps.pndsn.com
+        - agent-api.atera.com
+        - cacerts.thawte.com
+        - agentreportingstore.blob.core.windows.net
+        - atera-agent-heartbeat.servicebus.windows.net
+        - ps.atera.com
+        - atera.pubnubapi.com
+        - appcdn.atera.com
+        - atera-agent-heartbeat-cus.servicebus.windows.net
+        - ticketingitemsstoreeu.blob.core.windows.net
+        - download.visualstudio.microsoft.com
+        - a32dl55qcodech-ats.iot.eu-west-1.amazonaws.com
+      Ports:
+        - 443
