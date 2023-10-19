@@ -118,9 +118,7 @@ RMMs:
         - MspPlatform\\PME\\Installers\\FileCacheServiceAgentSetup\\.exe
         - MspPlatform\\PME\\Installers\\RequestHandlerAgentSetup\\.exe
       MacOS: # NEEDED
-        - 
       Linux: # NEEDED
-        - 
     NetConn:
       Domains:
         - send.n-able.com
