@@ -17,6 +17,7 @@ If you're looking to make a PR, the following is a list of desired definitions:
 - Remote Utilities
 - AnyConnect
 - Chrome Remote Desktop
+- Rustdesk
 
 ## Schema
 New RMMs should be added to the top level `RMM` object in `rmm.yml`
