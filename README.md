@@ -8,10 +8,22 @@ The use case this was created for is a security team who wants to monitor their 
 ## Plans for this repo
 The plan for this repo is to build CI steps that will output alerts useful in various tools such as CarbonBlack, SIEMs of various flavors, Sigma alerts, etc
 
+## Desired Definitions
+If you're looking to make a PR, the following is a list of desired definitions:
+
+- zoho assist
+- splashtop
+- ScreenConnect
+- Remote Utilities
+- AnyConnect
+- Chrome Remote Desktop
+
 ## Schema
 New RMMs should be added to the top level `RMM` object in `rmm.yml`
 
 Each new RMM should be in the format:
+
+Note that executables are assumed to have a wildcard to start the path. so `baz/bar` will be assumed to match `/baz/bar` and `/some/path/baz/bar`
 
 ```yaml
 RMM_Name:
