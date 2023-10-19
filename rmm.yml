@@ -6,8 +6,8 @@ RMMs:
       SignerSubjectName: TeamViewer GmbH
       MacOSSigner:
       Windows:
-        - "TeamViewer.exe"
-        - "TeamViewer_Setup.exe"
+        - "TeamViewer\.exe"
+        - "TeamViewer_Setup\.exe"
       MacOS:
         - "TeamViewer"
       Linux:
@@ -23,9 +23,9 @@ RMMs:
       SignerSubjectName: NinjaRMM, LLC
       MacOSSigner: "Developer ID Application: NinjaRMM LLC (EBNT3ZX97E)"
       Windows:
-        - NinjaRMMAgentPatcher.exe
-        - ninjarmm-cli.exe
-        - NinjaRMMAgent.exe
+        - NinjaRMMAgentPatcher\.exe
+        - ninjarmm-cli\.exe
+        - NinjaRMMAgent\.exe
       MacOS:
       Linux:
     NetConn:
@@ -44,27 +44,38 @@ RMMs:
   # AnyDesk
   AnyDesk:
     Executables:
-      SignerSubjectName:
-      MacOSSigner:
+      SignerSubjectName: philandro Software GmbH 
+      MacOSSigner: "Developer ID Application: philandro Software GmbH (KU6W3B6JMZ)"
       Windows:
+        - AnyDesk\.exe
+        - AnyDesk-.*\.exe
       MacOS:
+        - AnyDesk
       Linux:
+        - anydesk
     NetConn:
       Domains:
+        - "*.net.anydesk.com"
       Ports:
+        - 80
+        - 443
+        - 6568
+        - 50001
+        - 50002
+        - 50003
   # Atera
   Atera:
     Executables:
       SignerSubjectName: Atera Networks Ltd
       MacOSSigner:
       Windows:
-        - AteraAgent.exe
-        - AgentPackageNetworkDiscoveryWG.exe
-        - AgentPackageAgentInformation.exe
-        - AgentPackageSTRemote.exe
-        - AgentPackageFileExplorer.exe
-        - AgentPackageMonitoring.exe
-        - AgentPackageRuntimeInstaller.exe
+        - AteraAgent\.exe
+        - AgentPackageNetworkDiscoveryWG\.exe
+        - AgentPackageAgentInformation\.exe
+        - AgentPackageSTRemote\.exe
+        - AgentPackageFileExplorer\.exe
+        - AgentPackageMonitoring\.exe
+        - AgentPackageRuntimeInstaller\.exe
       MacOS:
         - ninjarmm-macagent
       Linux:
