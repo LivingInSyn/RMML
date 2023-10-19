@@ -47,8 +47,8 @@ TeamViewer:
       SignerSubjectName: TeamViewer GmbH
       MacOSSigner:
       Windows:
-        - "TeamViewer.exe"
-        - "TeamViewer_Setup.exe"
+        - "TeamViewer\\.exe"
+        - "TeamViewer_Setup\\.exe"
       MacOS:
         - "TeamViewer"
       Linux:
@@ -58,4 +58,24 @@ TeamViewer:
         - "*.teamviewer.com"
       Ports:
         - 5938
+```
+
+A blank to make life easy for creating PRs:
+
+```yaml
+SomeName:
+    Executables:
+      SignerSubjectName:
+      MacOSSigner:
+      Windows:
+        - 
+      MacOS:
+        - 
+      Linux:
+        - 
+    NetConn:
+      Domains:
+        - 
+      Ports:
+        - 443
 ```
