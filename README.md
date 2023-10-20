@@ -17,7 +17,7 @@ If you're looking to make a PR, the following is a list of desired definitions:
 - Remote Utilities
 - AnyConnect
 - Chrome Remote Desktop
-- Rustdesk
+- ~~Rustdesk~~ (PR: #1)
 
 ## Schema
 New RMMs should be added to the top level `RMM` object in `rmm.yml`
@@ -60,8 +60,8 @@ TeamViewer:
       SignerSubjectName: TeamViewer GmbH
       MacOSSigner:
       Windows:
-        - "TeamViewer\\.exe"
-        - "TeamViewer_Setup\\.exe"
+        - "TeamViewer.exe"
+        - "TeamViewer_Setup.exe"
       MacOS:
         - "TeamViewer"
       Linux:
