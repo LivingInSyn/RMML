@@ -6,8 +6,8 @@ RMMs:
       SignerSubjectName: TeamViewer GmbH
       MacOSSigner:
       Windows:
-        - "TeamViewer\\.exe"
-        - "TeamViewer_Setup\\.exe"
+        - "TeamViewer.exe"
+        - "TeamViewer_Setup.exe"
       MacOS:
         - "TeamViewer"
       Linux:
@@ -23,9 +23,9 @@ RMMs:
       SignerSubjectName: NinjaRMM, LLC
       MacOSSigner: "Developer ID Application: NinjaRMM LLC (EBNT3ZX97E)"
       Windows:
-        - NinjaRMMAgentPatcher\\.exe
-        - ninjarmm-cli\\.exe
-        - NinjaRMMAgent\\.exe
+        - NinjaRMMAgentPatcher.exe
+        - ninjarmm-cli.exe
+        - NinjaRMMAgent.exe
       MacOS:
       Linux:
     NetConn:
@@ -47,8 +47,8 @@ RMMs:
       SignerSubjectName: philandro Software GmbH
       MacOSSigner: "Developer ID Application: philandro Software GmbH (KU6W3B6JMZ)"
       Windows:
-        - AnyDesk\\.exe
-        - AnyDesk-.*\\.exe
+        - AnyDesk.exe
+        - AnyDesk-.*.exe
       MacOS:
         - AnyDesk
       Linux:
@@ -69,13 +69,13 @@ RMMs:
       SignerSubjectName: Atera Networks Ltd
       MacOSSigner:
       Windows:
-        - AteraAgent\\.exe
-        - AgentPackageNetworkDiscoveryWG\\.exe
-        - AgentPackageAgentInformation\\.exe
-        - AgentPackageSTRemote\\.exe
-        - AgentPackageFileExplorer\\.exe
-        - AgentPackageMonitoring\\.exe
-        - AgentPackageRuntimeInstaller\\.exe
+        - AteraAgent.exe
+        - AgentPackageNetworkDiscoveryWG.exe
+        - AgentPackageAgentInformation.exe
+        - AgentPackageSTRemote.exe
+        - AgentPackageFileExplorer.exe
+        - AgentPackageMonitoring.exe
+        - AgentPackageRuntimeInstaller.exe
       MacOS:
         - ninjarmm-macagent
       Linux:
@@ -106,17 +106,17 @@ RMMs:
       SignerSubjectName: N-ABLE TECHNOLOGIES LTD
       MacOSSigner: # NEEDED
       Windows:
-        - TakeControlTechConsole-Stable\\.exe
-        - NableCommandPromptManager32\\.exe
-        - NableCommandPromptManager64\\.exe
-        - NableReactiveManagement\\.exe
-        - BASupSrvc\\.exe
-        - BASupSrvcCnfg\\.exe
-        - MspPlatform\\PME\\PME.Agent\\.exe
-        - RequestHandlerAgent\\.exe
-        - N-able Technologies\\Windows Agent\\bin\\Agent\\.exe
-        - MspPlatform\\PME\\Installers\\FileCacheServiceAgentSetup\\.exe
-        - MspPlatform\\PME\\Installers\\RequestHandlerAgentSetup\\.exe
+        - TakeControlTechConsole-Stable.exe
+        - NableCommandPromptManager32.exe
+        - NableCommandPromptManager64.exe
+        - NableReactiveManagement.exe
+        - BASupSrvc.exe
+        - BASupSrvcCnfg.exe
+        - MspPlatform\PME\PME.Agent.exe
+        - RequestHandlerAgent.exe
+        - N-able Technologies\Windows Agent\bin\Agent.exe
+        - MspPlatform\PME\Installers\FileCacheServiceAgentSetup.exe
+        - MspPlatform\PME\Installers\RequestHandlerAgentSetup.exe
       MacOS: # NEEDED
       Linux: # NEEDED
     NetConn:
@@ -140,3 +140,24 @@ RMMs:
         - 443
         - 20
         - 21
+  RustDesk:
+    Executables:
+      SignerSubjectName: "Zhou Huabing"
+      MacOSSigner:
+      Windows:
+        - rustdesk-*.*.*-x86_64.exe
+        - rustdesk.exe
+        - rustdesk-host=*,key=*.exe #  rustdesk-host=<host-ip-or-name>,key=<public-key-string>
+      MacOS:
+        - rustdesk-*.*.*-x86_64.dmg
+        - rustdesk
+      Linux:
+        - rustdesk
+    NetConn:
+      Domains: # note, self hosted versions exist, unreliable
+      Ports: # note, these are configurable, but the defaults
+        - 21115
+        - 21116
+        - 21117
+        - 21118
+        - 21119
