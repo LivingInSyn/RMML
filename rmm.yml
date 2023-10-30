@@ -161,3 +161,16 @@ RMMs:
         - 21117
         - 21118
         - 21119
+  NetSupport: # note most information pulled from https://thedfirreport.com/2023/10/30/netsupport-intrusion-results-in-domain-compromise/
+    Executables:
+      SignerSubjectName:
+      MacOSSigner:
+      Windows:
+        - presentationhost.exe
+        - remcmdstub.exe
+      MacOS:
+      Linux:
+    NetConn:
+      Domains: # note, self hosted versions exist, unreliable
+      Ports:
+        - 443
