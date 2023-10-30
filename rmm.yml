@@ -169,7 +169,11 @@ RMMs:
         - presentationhost.exe
         - remcmdstub.exe
       MacOS:
+        - NetSupportDNA/SystemAgent/NetSupport*.pkg # pulled from NetSupport documentation
+        - NetSupport*.pkg # pulled from NetSupport documentation
       Linux:
+        - nsm/support # pulled from NetSupport documentation
+        - support # pulled from NetSupport documentation
     NetConn:
       Domains: # note, self hosted versions exist, unreliable
       Ports:
