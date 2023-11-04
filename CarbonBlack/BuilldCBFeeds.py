@@ -4,10 +4,12 @@ import os
 import hashlib
 import time
 import json
+import shutil
 
 EXEKEYS = ['Windows', 'MacOS', 'Linux']
 CIPATH = './ci-output'
 CBCIPATH = './ci-output/cbout'
+OUTPUT_NAME = './ci-output/carbon_black'
 
 def build_iocv2_exe(process):
     iocv2 = {
@@ -102,3 +104,5 @@ if __name__ == '__main__':
             f.write(json.dumps(feed, indent=2))
         with open(f'{CBCIPATH}/watchlist-{rmm}.json', 'w') as f:
             f.write(json.dumps(watchlist, indent=2))
+    # create a zip file of the outputs
+    shutil.make_archive(OUTPUT_NAME, 'zip', CBCIPATH)
