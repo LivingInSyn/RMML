@@ -51,7 +51,7 @@ Object we have to create is:
 },
 "reports": [{
     "id": "358aa2abf8d0",
-    "timestamp": "<integer>",
+    "timestamp": 0,
     "title": "RMML-r - <exclusion>",
     "description": "Remote Management and Monitoring Tool IOC List",
     "severity": "7",
@@ -118,9 +118,9 @@ If it exists make a `PUT` request to the following URL with the following object
 {
  "name": "RMML - <exclusion>",
  "description": "Remote Management and Monitoring Tool IOC List",
- "tags_enabled": "false",
- "alerts_enabled": "true",
- "alert_classification_enabled": "false",
+ "tags_enabled": false,
+ "alerts_enabled": true,
+ "alert_classification_enabled": false,
  "report_ids": ["358aa2abf8d0"]
 }
 ```
@@ -137,9 +137,9 @@ To create a watchlist we will POST the following object to:
 {
  "name": "RMML - <exclusion>",
  "description": "Remote Management and Monitoring Tool IOC List",
- "tags_enabled": "false",
- "alerts_enabled": "true",
- "alert_classification_enabled": "false",
+ "tags_enabled": false,
+ "alerts_enabled": true,
+ "alert_classification_enabled": false,
  "report_ids": ["358aa2abf8d0"]
 }
 ```
