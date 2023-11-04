@@ -31,7 +31,7 @@ def build_feed(rmms, exclusion):
     for rmm in rmms:
         if rmm == exclusion:
             continue
-        rmm = y['RMMs'][rmm]
+        rmm = rmms[rmm]
         for exekey in EXEKEYS:
             if exekey not in rmm['Executables']:
                 continue
@@ -104,5 +104,13 @@ if __name__ == '__main__':
             f.write(json.dumps(feed, indent=2))
         with open(f'{CBCIPATH}/watchlist-{rmm}.json', 'w') as f:
             f.write(json.dumps(watchlist, indent=2))
+    # run one more time with the 'rmm' of ALL, so we can support no exlusions
+    rmm = 'ALL'
+    feed = build_feed(rmms, rmm)
+    watchlist = build_watchlist(rmm)
+    with open(f'{CBCIPATH}/feed-{rmm}.json', 'w') as f:
+        f.write(json.dumps(feed, indent=2))
+    with open(f'{CBCIPATH}/watchlist-{rmm}.json', 'w') as f:
+        f.write(json.dumps(watchlist, indent=2))
     # create a zip file of the outputs
     shutil.make_archive(OUTPUT_NAME, 'zip', CBCIPATH)
