@@ -26,12 +26,13 @@ def get_latest_release():
     with open(dlfile, 'wb') as f:
         f.write(r.content)
     outdir = f'carbon_black_{secrets.token_hex(4)}'
-    os.makedirs(os.path.join(tempdir, outdir))
+    outdir = os.path.join(tempdir, outdir)
+    os.makedirs(outdir)
     shutil.unpack_archive(dlfile, outdir, 'zip')
     return outdir
 
 def check_feed_exists(urlbase, org_key, rmm):
-    url = f'{urlbase}//threathunter/feedmgr/v2/orgs/{org_key}/feeds?include_public=false'
+    url = f'{urlbase}/threathunter/feedmgr/v2/orgs/{org_key}/feeds?include_public=false'
     r = requests.get(url, headers=HEADERS)
     if r.status_code != 200:
         logging.fatal(f"Couldn't get feeds from CB. Error code: {r.status_code}")
@@ -44,7 +45,7 @@ def check_feed_exists(urlbase, org_key, rmm):
             break
     # if not, return None so we can create it
     if not feed_id:
-        return None
+        return None, None
     # if yes, get the report ID from it
     url = f'{url_base}/threathunter/feedmgr/v2/orgs/{org_key}/feeds/{feed_id}/reports'
     r = requests.get(url, headers=HEADERS)
@@ -53,7 +54,7 @@ def check_feed_exists(urlbase, org_key, rmm):
     report_id = r.json()['results'][0]['id']
     return feed_id, report_id
 
-def create_feed(urlbase, org_key, feed_json_path):
+def create_feed(url_base, org_key, feed_json_path):
     # returns feed_id, report_id
     url = f'{url_base}/threathunter/feedmgr/v2/orgs/{org_key}/feeds'
     with open(feed_json_path, 'r') as f:
@@ -62,7 +63,7 @@ def create_feed(urlbase, org_key, feed_json_path):
     r = requests.post(url, feed_json, headers=HEADERS)
     if r.status_code != 200:
         logging.fatal(f"Couldn't create the feed. Error code: {r.status_code}")
-    return r.json()['id'], feed_json_parsed['reports']['id']
+    return r.json()['id'], feed_json_parsed['reports'][0]['id']
 
 def update_report(urlbase, org_key, feed_id, report_id, feed_json_path):
     url = f'{urlbase}/threathunter/feedmgr/v2/orgs/{org_key}/feeds/{feed_id}/reports/{report_id}'
@@ -83,20 +84,24 @@ def watchlist_exists(urlbase, org_key, rmm):
             return wl['id']
     return None
 
-def create_watchlist(urlbase, org_key, wl_json_path):
+def create_watchlist(urlbase, org_key, wl_json_path, feed_id):
     url = f'{urlbase}/threathunter/watchlistmgr/v3/orgs/{org_key}/watchlists'
     with open(wl_json_path, 'r') as f:
         wl_json = f.read()
-    r = requests.post(url, headers=HEADERS, data=wl_json)
+    wl_json_parsed = json.loads(wl_json)
+    wl_json_parsed['classifier']['value'] = feed_id
+    r = requests.post(url, headers=HEADERS, data=json.dumps(wl_json_parsed))
     if r.status_code != 200:
         logging.fatal(f"Couldn't create the Watchlist. Error code: {r.status_code}")
     logging.info('created the watchlist')
 
-def update_watchlist(urlbase, org_key, wl_id, wl_json_path):
+def update_watchlist(urlbase, org_key, wl_id, wl_json_path, feed_id):
     url = f'{urlbase}/threathunter/watchlistmgr/v3/orgs/{org_key}/watchlists/{wl_id}'
     with open(wl_json_path, 'r') as f:
         wl_json = f.read()
-    r = requests.put(url, headers=HEADERS, data=wl_json)
+    wl_json_parsed = json.loads(wl_json)
+    wl_json_parsed['classifier']['value'] = feed_id
+    r = requests.put(url, headers=HEADERS, data=json.dumps(wl_json_parsed))
     if r.status_code != 200:
         logging.fatal(f"Couldn't update the Watchlist. Error code: {r.status_code}")
     logging.info('updated the watchlist')
@@ -113,11 +118,14 @@ if __name__ == "__main__":
     HEADERS['X-Auth-Token'] = f'{api_secret}/{api_id}'
     # python3 ApplyCarbonBlack.py <RMM> 
     if len(sys.argv) < 2:
-        logging.warn('No RMM set, proceding with: ALL')
+        logging.warning('No RMM set, proceding with: ALL')
         exclusion = 'ALL'
     else:
         exclusion = sys.argv[1]
-    cbfiles = get_latest_release()
+    if not os.getenv("RMML_DEBUG"):
+        cbfiles = get_latest_release()
+    else:
+        cbfiles = "./ci-output/cbout"
     feedpath = os.path.join(cbfiles, f'feed-{exclusion}.json')
     if not os.path.exists(feedpath):
         logging.fatal(f"Couldn't find {feedpath}, did you input the wrong RMM?")
@@ -136,7 +144,7 @@ if __name__ == "__main__":
     # create or update the watchlist
     watchlist_id = watchlist_exists(url_base, api_id, exclusion)
     if not watchlist_id:
-        create_watchlist(url_base, api_id, wlpath)
+        create_watchlist(url_base, api_id, wlpath, feed_id)
     else:
-        update_watchlist(url_base, api_id, watchlist_id, wlpath)
+        update_watchlist(url_base, api_id, watchlist_id, wlpath, feed_id)
     logging.info('finished!')

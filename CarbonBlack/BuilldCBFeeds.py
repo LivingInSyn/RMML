@@ -27,7 +27,7 @@ def build_iocv2_exe(process):
 
 def build_feed(rmms, exclusion):
     # build the list of IOCv2s
-    iocs = []
+    iocs = {}
     for rmm in rmms:
         if rmm == exclusion:
             continue
@@ -40,7 +40,8 @@ def build_feed(rmms, exclusion):
             for exe in rmm['Executables'][exekey]:
                 if ' ' in exe:
                     exe = f'"{exe}"'
-                iocs.append(build_iocv2_exe(exe))
+                newioc = build_iocv2_exe(exe)
+                iocs[newioc['id']] = newioc
     # build the feed object
     fo = {
         "feedinfo": {
@@ -66,7 +67,7 @@ def build_feed(rmms, exclusion):
     fo['feedinfo']['name'] = f'RMML-l - {exclusion}'
     fo['reports'][0]['timestamp'] = int(time.time())
     fo['reports'][0]['title'] = f'RMML-r - {exclusion}'
-    fo['reports'][0]['iocs_v2'] = iocs
+    fo['reports'][0]['iocs_v2'] = list(iocs.values())
 
     return fo
 
@@ -74,10 +75,13 @@ def build_watchlist(exclusion):
     wo = {
         "name": "RMML - <exclusion>",
         "description": "Remote Management and Monitoring Tool IOC List",
-        "tags_enabled": False,
+        "tags_enabled": True,
         "alerts_enabled": True,
         "alert_classification_enabled": False,
-        "report_ids": ["358aa2abf8d0"]
+        "classifier": {
+            "key": "feed_id",
+            "value": "ABCDEFGHIJKLMNOPQRSTU"
+        }
     }
     wo['name'] = f'RMML - {exclusion}'
     return wo
