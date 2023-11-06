@@ -7,6 +7,8 @@ on:
 jobs:
   build_output:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
@@ -28,11 +30,11 @@ jobs:
         tag_name: ${{ github.ref }}
         body_path: CHANGELOG.md
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ github.TOKEN }}
     - name: add artifacts
       uses: actions/upload-release-asset@v1
       env:
-        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_TOKEN: ${{ github.TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./ci-output/carbon_black.zip
