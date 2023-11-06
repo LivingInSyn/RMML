@@ -14,6 +14,8 @@ jobs:
         python-version: '3.x'
     - name: Install poetry
       uses: abatilo/actions-poetry@v2
+    - name: Poetry install
+      run: poetry install
     - name: generate carbon black outputs
       run: poetry run python3 CarbonBlack/BuilldCBFeeds.py
     - name: release
