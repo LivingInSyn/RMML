@@ -19,6 +19,9 @@ If you're looking to make a PR, the following is a list of desired definitions:
 - Chrome Remote Desktop
 - ~~Rustdesk~~ (PR: #1)
 
+## Using it:
+Carbon Black: see the CarbonBlack directory
+
 ## Schema
 New RMMs should be added to the top level `RMM` object in `rmm.yml`
 
