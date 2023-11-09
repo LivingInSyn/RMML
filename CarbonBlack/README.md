@@ -1,3 +1,26 @@
+# How to use it:
+Set the following environmental variables:
+
+* CB_SECRET: The API key/secret
+* CB_APIID: The org ID
+* CB_URL: the base URL for your instance
+    Defaults to: `https://defense-prod05.conferdeploy.net`
+
+Run the apply script as:
+
+```shell
+python3 ApplyCarbonBlack.py <RMM to exclude>
+```
+
+Example:
+
+```shell
+python3 ApplyCarbonBlack.py TeamViewer
+```
+
+If you don't set an RMM to exclude, all will be included
+
+# How it works
 `CarbonBlackGen.py` will work by:
 
 ## 1. Build the IOCs

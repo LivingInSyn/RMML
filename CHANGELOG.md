@@ -1,3 +1,6 @@
+# v0.1
+Carbon Black now works and can be used operationally.
+
 # v0.02
 still working on CI
 
