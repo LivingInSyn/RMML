@@ -71,6 +71,9 @@ def update_report(urlbase, org_key, feed_id, report_id, feed_json_path):
         feed_json = f.read()
     feed_json_parsed = json.loads(feed_json)
     r = requests.put(url, headers=HEADERS, data=json.dumps(feed_json_parsed['reports'][0]))
+    if r.status_code == 400 and 'timestamp is out-of-date' in r.content.decode():
+        print("no update, exiting")
+        sys.exit(0)
     if r.status_code != 200:
         logging.fatal(f"Couldn't update the report. Error code: {r.status_code}")
 
