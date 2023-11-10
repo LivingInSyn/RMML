@@ -1,3 +1,6 @@
+# v0.2
+Add Connectwise ScreenConnect
+
 # v0.1
 Carbon Black now works and can be used operationally.
 
