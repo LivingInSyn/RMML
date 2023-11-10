@@ -195,9 +195,9 @@ RMMs:
         - - ConnectWiseControl.ClientSetup.sh
     NetConn:
       Domains: # can be self-hosted
-        - "myconnectwise.com",
-        - "connectwise.com",
-        - "screenconnect.com",
+        - "myconnectwise.com"
+        - "connectwise.com"
+        - "screenconnect.com"
         - "itsupport247.net"
       Ports:
         - 80
