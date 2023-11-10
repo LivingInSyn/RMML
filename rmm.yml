@@ -178,3 +178,22 @@ RMMs:
       Domains: # note, self hosted versions exist, unreliable
       Ports:
         - 443
+  ScreenConnect: 
+    Executables:
+      SignerSubjectName: Connectwise, LLC
+      MacOSSigner:
+      Windows:
+        - ScreenConnect.WindowsClient.exe
+        - ScreenConnect.WindowsBackstageShell.exe
+        - ScreenConnect.ClientService.exe
+        - ScreenConnect.Service.exe
+      MacOS:
+        - # NEEDED
+      Linux:
+        - # NEEDED
+    NetConn:
+      Domains: # can be self-hosted
+      Ports:
+        - 80
+        - 443
+        - 8041
