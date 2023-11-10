@@ -13,7 +13,7 @@ If you're looking to make a PR, the following is a list of desired definitions:
 
 - zoho assist
 - splashtop
-- ScreenConnect
+- ~~ScreenConnect~~ (PR: 9, thanks to @signifi3d)
 - Remote Utilities
 - AnyConnect
 - Chrome Remote Desktop
