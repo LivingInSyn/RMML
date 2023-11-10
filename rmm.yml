@@ -188,11 +188,17 @@ RMMs:
         - ScreenConnect.ClientService.exe
         - ScreenConnect.Service.exe
       MacOS:
-        - # NEEDED
+        - connectwisecontrol-*
+        - ConnectWiseControl.ClientSetup.sh
       Linux:
-        - # NEEDED
+        - connectwisecontrol-*
+        - - ConnectWiseControl.ClientSetup.sh
     NetConn:
       Domains: # can be self-hosted
+        - "myconnectwise.com",
+        - "connectwise.com",
+        - "screenconnect.com",
+        - "itsupport247.net"
       Ports:
         - 80
         - 443
