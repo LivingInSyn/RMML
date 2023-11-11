@@ -11,7 +11,7 @@ The plan for this repo is to build CI steps that will output alerts useful in va
 ## Desired Definitions
 If you're looking to make a PR, the following is a list of desired definitions:
 
-- zoho assist
+- ~~zoho assist~~ (PR: #10)
 - splashtop
 - ~~ScreenConnect~~ (PR: 9, thanks to @signifi3d)
 - Remote Utilities
