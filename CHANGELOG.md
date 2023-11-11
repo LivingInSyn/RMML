@@ -1,3 +1,6 @@
+# v0.3
+Add ZohoAssist
+
 # v0.2
 Add Connectwise ScreenConnect
 
