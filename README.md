@@ -1,12 +1,13 @@
 # RMML
 RMML is the Remote Management and Monitoring (tool) List. It is a list of RMM tools with associated metadata that aims to be useful for IT and Security teams.
 
-The use case this was created for is a security team who wants to monitor their environment for RMMs that aren't supposed to be there. They can use this list (commenting out their RMM of choice) to build alerts.
+The use case this was created for is a security team who wants to monitor their environment for RMMs that aren't supposed to be there (or for all of them). CI in the releases will include `rmm.yml` in forms designed to be consumed by various EDRs and alerting mechanisms. It is released in the complete form as well as with incividual exclusions for easy exclusion of your RMM of choice.
+
+Currently supported CI integrations are:
+
+* Carbon Black
 
 **PRs are welcome and encouraged!**
-
-## Plans for this repo
-The plan for this repo is to build CI steps that will output alerts useful in various tools such as CarbonBlack, SIEMs of various flavors, Sigma alerts, etc
 
 ## Desired Definitions
 If you're looking to make a PR, the following is a list of desired definitions:
