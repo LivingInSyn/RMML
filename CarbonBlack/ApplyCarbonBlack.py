@@ -75,6 +75,7 @@ def update_report(urlbase, org_key, feed_id, report_id, feed_json_path):
         print("no update, exiting")
         sys.exit(0)
     if r.status_code != 200:
+        print(r.content)
         logging.fatal(f"Couldn't update the report. Error code: {r.status_code}")
 
 def watchlist_exists(urlbase, org_key, rmm):

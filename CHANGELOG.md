@@ -1,3 +1,6 @@
+# v0.4.1
+* add a bugfix for carbon black on level
+
 # v0.4
 * fix Atera on MacOS (thanks Brian Clark)
 * Add fleetdeck
