@@ -13,7 +13,7 @@ Currently supported CI integrations are:
 If you're looking to make a PR, the following is a list of desired definitions:
 
 - ~~zoho assist~~ (PR: #10)
-- splashtop
+- ~~splashtop~~
 - ~~ScreenConnect~~ (PR: 9, thanks to @signifi3d)
 - Remote Utilities
 - AnyConnect
