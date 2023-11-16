@@ -282,7 +282,8 @@ RMMs:
       Windows:
         - PCMonitorSrv.exe
         - PCMonitorManager.exe
-        - C:\Program files\Pulseway\*
+        - Program files\Pulseway\*
+        - Program Files (x86)\Pulseway\*
       MacOS:
       Linux:
     NetConn:
@@ -298,7 +299,8 @@ RMMs:
         - streamer.exe
         - SplashtopSOS.exe
         - SRAgent.exe
-        - C:\Program Files (x86)\Splashtop\*
+        - Program Files (x86)\Splashtop\*
+        - Program Files\Splashtop\*
       MacOS:
         - Splashtop SOS.app
         - Splashtop SOS
@@ -318,7 +320,7 @@ RMMs:
       SignerSubjectName:
       MacOSSigner:
       Windows:
-        - C:\ProgramData\TacticalRMM\* # script dir for tactical rmm
+        - ProgramData\TacticalRMM\* # script dir for tactical rmm
         - MeshAgent.exe
         - tacticalrmm.exe
       MacOS:

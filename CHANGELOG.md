@@ -1,3 +1,6 @@
+# v0.4.2
+* additional bugfix for carbon black
+
 # v0.4.1
 * add a bugfix for carbon black on level
 
