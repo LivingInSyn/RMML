@@ -77,7 +77,7 @@ RMMs:
         - AgentPackageMonitoring.exe
         - AgentPackageRuntimeInstaller.exe
       MacOS:
-        - ninjarmm-macagent
+        - AteraAgent.app
       Linux:
     NetConn:
       Domains:
@@ -233,4 +233,97 @@ RMMs:
         - "gateway.zohoassist.com"
       Ports:
         - 80
+        - 443
+  FleetDeck:
+    Executables:
+      SignerSubjectName: FleetDeck Inc
+      MacOSSigner:
+      Windows:
+        - fleetdeck-agent.exe
+        - fleetdeck-agent-*.exe #fleetdeck-agent-[REDACTED22CharacterKey].exe
+        - fleetdeck-agent.msi
+        - fleetdeck-agent.mst
+        - fleetdeck.exe
+        - fleetdeck_agent_svc.exe
+      MacOS: # macos not supported
+      Linux: # macos not supported
+    NetConn:
+      Domains:
+        - "*.fleetdeck.io"
+        - fleetdeck.io
+        - fleetdm.com
+      Ports:
+        - 443
+  Level.io:
+    Executables:
+      SignerSubjectName: Level Software, Inc
+      MacOSSigner: # needed
+      Windows:
+        - Level.exe
+      MacOS:
+        - /usr/local/bin/level
+      Linux:
+        - level
+    NetConn:
+      Domains:
+        - agents.level.io #(used by the agent to communicate with Level)
+        - online.level.io #(used to check connectivity status)
+        - builds.level.io #(used for agent updates)
+        - downloads.level.io #(used for initial agent install)
+      Ports:
+        - 443
+        - 80
+        - 3478
+        - 5349
+  Pulseway:
+    Executables:
+      SignerSubjectName: MMSoft Design
+      MacOSSigner:
+      Windows:
+        - PCMonitorSrv.exe
+        - PCMonitorManager.exe
+        - C:\Program files\Pulseway\*
+      MacOS:
+      Linux:
+    NetConn:
+      Domains:
+        - pulseway.com
+      Ports:
+        - 443
+  Splashtop:
+    Executables:
+      SignerSubjectName: Splashtop Inc.
+      MacOSSigner: "Developer ID Application: Splashtop Inc. (CPQQ3AW49Y)"
+      Windows:
+        - streamer.exe
+        - SplashtopSOS.exe
+        - SRAgent.exe
+        - C:\Program Files (x86)\Splashtop\*
+      MacOS:
+        - Splashtop SOS.app
+        - Splashtop SOS
+        - Splashtop SOS Agent
+        - SRFileHelper
+        - SRSOSHelper
+      Linux:
+        - SplashtopStreamer.deb
+    NetConn:
+      Domains:
+        - "*.splashtop.com"
+        - "*.splashtop.eu"
+      Ports:
+        - 443
+  TacticalRMM:
+    Executables:
+      SignerSubjectName:
+      MacOSSigner:
+      Windows:
+        - C:\ProgramData\TacticalRMM\* # script dir for tactical rmm
+        - MeshAgent.exe
+        - tacticalrmm.exe
+      MacOS:
+      Linux:
+    NetConn:
+      Domains: # self hosted
+      Ports:
         - 443

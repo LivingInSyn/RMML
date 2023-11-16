@@ -1,3 +1,11 @@
+# v0.4
+* fix Atera on MacOS (thanks Brian Clark)
+* Add fleetdeck
+* Add level.io
+* Add pulseway (windows only)
+* Add Splashtop
+* Add TacticalRMM
+
 # v0.3
 Add ZohoAssist
 
