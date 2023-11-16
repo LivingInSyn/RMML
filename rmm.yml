@@ -261,7 +261,7 @@ RMMs:
       Windows:
         - Level.exe
       MacOS:
-        - /usr/local/bin/level
+        - level
       Linux:
         - level
     NetConn:
