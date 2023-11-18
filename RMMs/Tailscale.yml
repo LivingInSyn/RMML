@@ -1,0 +1,23 @@
+Executables:
+  SignerSubjectName: TeamViewer GmbH
+  MacOSSigner: 'Apple Mac OS Application Signing' # This is what I pulled :shrug:
+  Windows:
+  - tailscale.exe
+  - tailscaled.exe
+  MacOS:
+  - Tailscale
+  - Tailscaled
+  - IPNExtension
+  - io.tailscale.ipn.macsys.network-extension
+  Linux:
+  - tailscale
+  - tailscald
+NetConn:
+  Domains:
+  - '*.tailscale.com'
+  - '*.tailscale.io'
+  TCPPorts:
+  - 443
+  UDPPorts:
+  - 41641
+  - 3478
