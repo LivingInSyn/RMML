@@ -1,0 +1,18 @@
+Executables:
+  SignerSubjectName:
+  MacOSSigner:
+  Windows:
+  - ngrok
+  - ngrok.exe
+  MacOS:
+  - ngrok
+  Linux:
+  - ngrok
+NetConn:
+  Domains:
+  - '*.ngrok-agent.com'
+  - 'update.equinox.io'
+  - 'tunnel.ngrok.com'
+  - 'tunnel.*.ngrok.com'
+  Ports:
+  - 443
