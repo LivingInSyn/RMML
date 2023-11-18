@@ -1,5 +1,5 @@
 # RMML
-RMML is the Remote Management and Monitoring (tool) List. It is a list of RMM tools with associated metadata that aims to be useful for IT and Security teams.
+RMML is the Remote Management and Monitoring (tool) List. A decision was made to also include remote network access tools such as ngrok and tailscale. It is a list of RMM tools with associated metadata that aims to be useful for IT and Security teams.
 
 The use case this was created for is a security team who wants to monitor their environment for RMMs that aren't supposed to be there (or for all of them). CI in the releases will include the contents of the `RMMs` folder in forms designed to be consumed by various EDRs and alerting mechanisms. It is released in the complete form as well as with incividual exclusions for easy exclusion of your RMM of choice.
 
