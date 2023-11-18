@@ -64,7 +64,9 @@ for filename in os.listdir(RMMDIR):
         # load the file
         with open(file, 'r') as f:
             rmm = yaml.safe_load(f)
-        rmm_name = file.removesuffix('.yml').removesuffix('.yaml')
+        rmm_name = file.removeprefix(RMMDIR).removesuffix('.yml').removesuffix('.yaml')[1:]
+        if rmm_name == 'Tailscale':
+            a = 'foo'
         if 'Executables' not in rmm:
             print(f'Executables not defined in {rmm_name}')
             sys.exit(1)
@@ -73,9 +75,9 @@ for filename in os.listdir(RMMDIR):
             sys.exit(1)
         check_executables(rmm_name, rmm['Executables'])
         check_netconn(rmm_name, rmm['NetConn'])
-    if len(ERRORS) == 0:
-        sys.exit(0)
-    else:
-        for e in ERRORS:
-            print(e)
-        sys.exit(1)
+if len(ERRORS) == 0:
+    sys.exit(0)
+else:
+    for e in ERRORS:
+        print(e)
+    sys.exit(1)

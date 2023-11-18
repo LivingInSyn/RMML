@@ -16,7 +16,7 @@ NetConn:
   Domains:
   - '*.tailscale.com'
   - '*.tailscale.io'
-  TCPPorts:
+  Ports:
   - 443
   UDPPorts:
   - 41641
