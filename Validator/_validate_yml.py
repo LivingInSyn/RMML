@@ -64,13 +64,13 @@ for filename in os.listdir(RMMDIR):
         # load the file
         with open(file, 'r') as f:
             rmm = yaml.safe_load(f)
+        rmm_name = file.removesuffix('.yml').removesuffix('.yaml')
         if 'Executables' not in rmm:
-            print(f'Executables not defined in {r}')
+            print(f'Executables not defined in {rmm_name}')
             sys.exit(1)
         if 'NetConn' not in rmm:
-            print(f'NetConn not defined in {r}')
+            print(f'NetConn not defined in {rmm_name}')
             sys.exit(1)
-        rmm_name = file.removesuffix('.yml').removesuffix('.yaml')
         check_executables(rmm_name, rmm['Executables'])
         check_netconn(rmm_name, rmm['NetConn'])
     if len(ERRORS) == 0:
