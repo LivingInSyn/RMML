@@ -1,0 +1,20 @@
+Executables:
+  Linux:
+  - level
+  MacOS:
+  - level
+  MacOSSigner: null
+  SignerSubjectName: Level Software, Inc
+  Windows:
+  - Level.exe
+NetConn:
+  Domains:
+  - agents.level.io
+  - online.level.io
+  - builds.level.io
+  - downloads.level.io
+  Ports:
+  - 443
+  - 80
+  - 3478
+  - 5349

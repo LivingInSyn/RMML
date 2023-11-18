@@ -1,0 +1,24 @@
+Executables:
+  Linux:
+  - connectwisecontrol-*
+  - ConnectWiseControl.ClientSetup.sh
+  MacOS:
+  - connectwisecontrol-*
+  - ConnectWiseControl.ClientSetup.sh
+  MacOSSigner: null
+  SignerSubjectName: Connectwise, LLC
+  Windows:
+  - ScreenConnect.WindowsClient.exe
+  - ScreenConnect.WindowsBackstageShell.exe
+  - ScreenConnect.ClientService.exe
+  - ScreenConnect.Service.exe
+NetConn:
+  Domains:
+  - myconnectwise.com
+  - connectwise.com
+  - screenconnect.com
+  - itsupport247.net
+  Ports:
+  - 80
+  - 443
+  - 8041

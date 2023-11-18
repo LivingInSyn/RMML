@@ -1,0 +1,20 @@
+Executables:
+  Linux:
+  - anydesk
+  MacOS:
+  - AnyDesk
+  MacOSSigner: 'Developer ID Application: philandro Software GmbH (KU6W3B6JMZ)'
+  SignerSubjectName: philandro Software GmbH
+  Windows:
+  - AnyDesk.exe
+  - AnyDesk-.*.exe
+NetConn:
+  Domains:
+  - '*.net.anydesk.com'
+  Ports:
+  - 80
+  - 443
+  - 6568
+  - 50001
+  - 50002
+  - 50003

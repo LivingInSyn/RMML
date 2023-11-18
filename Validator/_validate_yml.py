@@ -1,6 +1,8 @@
 import yaml
 import sys
+import os
 
+RMMDIR = './RMMs'
 OSES = ['Windows','MacOS','Linux']
 ERRORS = []
 
@@ -55,25 +57,22 @@ def check_netconn(r, nc):
             if not isinstance(p, (int)):
                 ERRORS.append(f'Found a non-int in {r} Ports. Value: {p}')
 
-with open("./rmm.yml", "r") as f:
-    try:
-        y = yaml.safe_load(f)
-    except yaml.YAMLError as exc:
-        print(f'Error loading yaml: {exc}')
-        sys.exit(1)
-    if 'RMMs' not in y:
-        print('RMMs not in yaml')
-        sys.exit(1)
-    for r in y['RMMs']:
-        rmm = y['RMMs'][r]
+for filename in os.listdir(RMMDIR):
+    file = os.path.join(RMMDIR, filename)
+    # checking if it is a file
+    if os.path.isfile(file):
+        # load the file
+        with open(file, 'r') as f:
+            rmm = yaml.safe_load(f)
         if 'Executables' not in rmm:
             print(f'Executables not defined in {r}')
             sys.exit(1)
         if 'NetConn' not in rmm:
             print(f'NetConn not defined in {r}')
             sys.exit(1)
-        check_executables(r, rmm['Executables'])
-        check_netconn(r, rmm['NetConn'])
+        rmm_name = file.removesuffix('.yml').removesuffix('.yaml')
+        check_executables(rmm_name, rmm['Executables'])
+        check_netconn(rmm_name, rmm['NetConn'])
     if len(ERRORS) == 0:
         sys.exit(0)
     else:

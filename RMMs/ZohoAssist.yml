@@ -1,0 +1,30 @@
+Executables:
+  Linux: null
+  MacOS: null
+  MacOSSigner: null
+  SignerSubjectName: Zoho Corporation Pvt. Ltd.
+  Windows:
+  - ZA_Connect.exe
+  - ZA_Upgrader
+  - ZohoMeeting/agent.exe
+  - ZMAgent.exe
+  - ZohoURSService.exe
+  - ZohoMeeting.exe
+  - ZohoTray.exe
+  - ZohoURS.exe
+NetConn:
+  Domains:
+  - '*.zoho.com'
+  - '*.zoho.eu'
+  - '*.zoho.in'
+  - '*.zoho.com.au'
+  - '*.zoho.com.cn'
+  - '*.zohoassist.com'
+  - '*.zohoassist.jp'
+  - '*.zohoassist.com.cn'
+  - downloads.zohodl.com.cn
+  - downloads.zohocdn.com
+  - gateway.zohoassist.com
+  Ports:
+  - 80
+  - 443
