@@ -1,13 +1,13 @@
 Executables:
-  Linux:
-  - TeamViewer
-  MacOS:
-  - TeamViewer
-  MacOSSigner: null
   SignerSubjectName: TeamViewer GmbH
+  MacOSSigner:
   Windows:
   - TeamViewer.exe
   - TeamViewer_Setup.exe
+  MacOS:
+  - TeamViewer
+  Linux:
+  - TeamViewer
 NetConn:
   Domains:
   - '*.teamviewer.com'
