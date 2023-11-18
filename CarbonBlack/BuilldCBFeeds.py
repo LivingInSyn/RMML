@@ -6,6 +6,7 @@ import time
 import json
 import shutil
 
+RMMDIR = './RMMs'
 EXEKEYS = ['Windows', 'MacOS', 'Linux']
 CIPATH = './ci-output'
 CBCIPATH = './ci-output/cbout'
@@ -87,18 +88,20 @@ def build_watchlist(exclusion):
     return wo
 
 if __name__ == '__main__':
-    with open("./rmm.yml", "r") as f:
-        try:
-            y = yaml.safe_load(f)
-        except yaml.YAMLError as exc:
-            print(f'Error loading yaml: {exc}')
-            sys.exit(1)
-    rmms = y['RMMs']
     # make sure output folder exists and create it if it doesn't
     if not os.path.exists(CIPATH):
         os.makedirs(CIPATH)
     if not os.path.exists(CBCIPATH):
         os.makedirs(CBCIPATH)
+    # generate the rmms dict
+    rmms = {}
+    for filename in os.listdir(RMMDIR):
+        file = os.path.join(RMMDIR, filename)
+        if os.path.isfile(file):
+            with open(file, 'r') as f:
+                rmm = yaml.safe_load(f)
+            rmm_name = file.removeprefix(RMMDIR).removesuffix('.yml').removesuffix('.yaml')[1:]
+            rmms[rmm_name] = rmm
     # generate the output files for the feeds
     for rmm in rmms:
         # the RMM here is the one we're excluding from alerting
