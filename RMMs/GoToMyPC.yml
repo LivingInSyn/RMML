@@ -1,0 +1,21 @@
+Executables:
+  SignerSubjectName: LogMeIn, Inc.
+  Windows:
+  - g2tray.exe
+  - g2comm.exe
+  - g2host.exe
+  - g2svc.exe
+  - g2vistahelper.exe
+  - g2mainh.exe
+  - g2fileh.exe
+  - g2audioh.exe
+  - g2printh.exe
+  - GoToMyPCCrashHandler.exe
+  - Program Files (x86)\GoToMyPC\*
+  - Program Files\GoToMyPC\*
+NetConn:
+  Domains:
+  - 'poll.gotomypc.com'
+  Ports:
+  - 80
+  - 443
