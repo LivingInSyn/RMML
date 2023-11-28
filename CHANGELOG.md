@@ -1,3 +1,9 @@
+# v1.0.0
+* Update to v1
+* Split RMMs into separate files
+* Add network access alerts
+* Change Carbon Black to not require github releases
+
 # v0.4.2
 * additional bugfix for carbon black
 
