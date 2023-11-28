@@ -103,7 +103,7 @@ def build_release(exclusions: List[str]):
                 continue
             rmms[rmm_name] = rmm
     # for each RMM, generate the stuff
-    feed = build_feed()
+    feed = build_feed(rmms)
     watchlist = build_watchlist()
     return feed, watchlist
 
