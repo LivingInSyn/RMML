@@ -1,1 +1,1 @@
-This is a dummy file to make poetry place nice
+This is a dummy file to make poetry play nice
