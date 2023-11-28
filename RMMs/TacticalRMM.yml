@@ -1,0 +1,13 @@
+Executables:
+  Linux: null
+  MacOS: null
+  MacOSSigner: null
+  SignerSubjectName: null
+  Windows:
+  - ProgramData\TacticalRMM\*
+  - MeshAgent.exe
+  - tacticalrmm.exe
+NetConn:
+  Domains: null
+  Ports:
+  - 443

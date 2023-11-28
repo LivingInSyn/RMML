@@ -1,0 +1,23 @@
+Executables:
+  Linux:
+  - SplashtopStreamer.deb
+  MacOS:
+  - Splashtop SOS.app
+  - Splashtop SOS
+  - Splashtop SOS Agent
+  - SRFileHelper
+  - SRSOSHelper
+  MacOSSigner: 'Developer ID Application: Splashtop Inc. (CPQQ3AW49Y)'
+  SignerSubjectName: Splashtop Inc.
+  Windows:
+  - streamer.exe
+  - SplashtopSOS.exe
+  - SRAgent.exe
+  - Program Files (x86)\Splashtop\*
+  - Program Files\Splashtop\*
+NetConn:
+  Domains:
+  - '*.splashtop.com'
+  - '*.splashtop.eu'
+  Ports:
+  - 443

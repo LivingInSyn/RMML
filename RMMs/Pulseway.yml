@@ -1,0 +1,15 @@
+Executables:
+  Linux: null
+  MacOS: null
+  MacOSSigner: null
+  SignerSubjectName: MMSoft Design
+  Windows:
+  - PCMonitorSrv.exe
+  - PCMonitorManager.exe
+  - Program files\Pulseway\*
+  - Program Files (x86)\Pulseway\*
+NetConn:
+  Domains:
+  - pulseway.com
+  Ports:
+  - 443

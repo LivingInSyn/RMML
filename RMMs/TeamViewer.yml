@@ -1,0 +1,15 @@
+Executables:
+  SignerSubjectName: TeamViewer GmbH
+  MacOSSigner:
+  Windows:
+  - TeamViewer.exe
+  - TeamViewer_Setup.exe
+  MacOS:
+  - TeamViewer
+  Linux:
+  - TeamViewer
+NetConn:
+  Domains:
+  - '*.teamviewer.com'
+  Ports:
+  - 5938

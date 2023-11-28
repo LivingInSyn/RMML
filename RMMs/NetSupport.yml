@@ -1,0 +1,16 @@
+Executables:
+  Linux:
+  - nsm/support
+  - support
+  MacOS:
+  - NetSupportDNA/SystemAgent/NetSupport*.pkg
+  - NetSupport*.pkg
+  MacOSSigner: null
+  SignerSubjectName: null
+  Windows:
+  - presentationhost.exe
+  - remcmdstub.exe
+NetConn:
+  Domains: null
+  Ports:
+  - 443

@@ -1,0 +1,22 @@
+Executables:
+  Linux: null
+  MacOS: null
+  MacOSSigner: 'Developer ID Application: NinjaRMM LLC (EBNT3ZX97E)'
+  SignerSubjectName: NinjaRMM, LLC
+  Windows:
+  - NinjaRMMAgentPatcher.exe
+  - ninjarmm-cli.exe
+  - NinjaRMMAgent.exe
+NetConn:
+  Domains:
+  - '*.ninjarmm.com'
+  - '*.ninjarmm.net'
+  - '*.rmmservice.com'
+  - https://ninjauploads.s3.amazonaws.com/app.ninjarmm.com*
+  - http://ninjaresources.s3.amazonaws.com/AgentBinaries/patchmgmt/
+  - https://ninjabuilds.s3.amazonaws.com/
+  - http://s3-us-west-2.amazonaws.com/
+  - sentry.io*
+  Ports:
+  - 80
+  - 443

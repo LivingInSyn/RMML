@@ -1,0 +1,20 @@
+Executables:
+  Linux:
+  - rustdesk
+  MacOS:
+  - rustdesk-*.*.*-x86_64.dmg
+  - rustdesk
+  MacOSSigner: null
+  SignerSubjectName: Zhou Huabing
+  Windows:
+  - rustdesk-*.*.*-x86_64.exe
+  - rustdesk.exe
+  - rustdesk-host=*,key=*.exe
+NetConn:
+  Domains: null
+  Ports:
+  - 21115
+  - 21116
+  - 21117
+  - 21118
+  - 21119

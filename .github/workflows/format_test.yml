@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Validate YAML file
-      run: yamllint rmm.yml
+      run: yamllint ./RMMs/
 
   schema:
     runs-on: ubuntu-latest

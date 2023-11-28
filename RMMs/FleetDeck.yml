@@ -1,0 +1,19 @@
+Executables:
+  Linux: null
+  MacOS: null
+  MacOSSigner: null
+  SignerSubjectName: FleetDeck Inc
+  Windows:
+  - fleetdeck-agent.exe
+  - fleetdeck-agent-*.exe
+  - fleetdeck-agent.msi
+  - fleetdeck-agent.mst
+  - fleetdeck.exe
+  - fleetdeck_agent_svc.exe
+NetConn:
+  Domains:
+  - '*.fleetdeck.io'
+  - fleetdeck.io
+  - fleetdm.com
+  Ports:
+  - 443
