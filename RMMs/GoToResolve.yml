@@ -1,0 +1,31 @@
+Executables:
+  SignerSubjectName: LogMeIn, Inc.
+  Windows:
+  - GoToResolveUnattended.exe
+  - GoToResolveUnattendedUpdater.exe
+  - GoToResolveUnattendedUI.exe
+  - GoToResolveTools64.exe
+  - GoToResolveUi.exe
+  - GoToResolveService.exe
+  - GoToResolveProcessChecker.exe
+  - GoToResolveCrashHandler.exe
+  - GoToResolveLoggerProcess.exe
+  - GoTo.Resolve.Antivirus.App.exe
+  - GoTo.Resolve.PatchManagement.Client.exe
+  - GoTo.Resolve.Alerts.Monitor.App.exe
+  - GoToResolve.exe
+  - Program Files (x86)\GoTo Resolve Unattended\*
+  - Program Files\GoTo Resolve Unattended\*
+  - AppData\Local\GoTo Resolve Applet\*
+NetConn:
+  Domains:
+  - 'console.gotoresolve.com'
+  - '*.console.gotoresolve.com'
+  - '*.console.gotoassist.com'
+  - 'console.gotoassist.com'
+  - '*.remoteview.logmein.com'
+  - '*.console.logmeinrescue.com'
+  - '*.services.gotoresolve.com'
+  Ports:
+  - 3489
+  - 443
