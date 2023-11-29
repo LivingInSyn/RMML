@@ -1,3 +1,6 @@
+# v1.1.0
+* add definition for `NoMachine`
+
 # v1.0.0
 * Update to v1
 * Split RMMs into separate files
