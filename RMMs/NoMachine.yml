@@ -1,0 +1,79 @@
+Executables:
+  SignerSubjectName:
+  MacOSSigner: "Developer ID Application: NoMachine S.a.r.l. (493C5JZAGR)"
+  Windows:
+  - nxexec.exe
+  - nxplayer.bin
+  - nxplayer.exe
+  - nxserver.bin
+  - nxservice.exe
+  - nxservice64.exe
+  MacOS:
+  - nxagent
+  - nxauth
+  - nxclient
+  - nxclient.bin
+  - nxcodec.bin
+  - nxd
+  - nxesd
+  - nxexec
+  - nxfs
+  - nxfsm
+  - nxfsserver
+  - nxkb
+  - nxkeygen
+  - nxlocate
+  - nxlpd
+  - nxnode
+  - nxnode.bin
+  - nxplayer
+  - nxplayer.bin
+  - nxpost
+  - nxprint
+  - nxserver
+  - nxserver.bin
+  - nxsh
+  - nxspool
+  - nxssh
+  - nxssh-add
+  - nxssh-agent
+  - nxtunctl
+  - nxusbd
+  Linux:
+  - nxagent
+  - nxauth
+  - nxclient
+  - nxclient.bin
+  - nxcodec.bin
+  - nxd
+  - nxesd
+  - nxexec
+  - nxfs
+  - nxfsm
+  - nxfsserver
+  - nxkb
+  - nxkeygen
+  - nxlocate
+  - nxlpd
+  - nxnode
+  - nxnode.bin
+  - nxplayer
+  - nxplayer.bin
+  - nxpost
+  - nxprint
+  - nxserver
+  - nxserver.bin
+  - nxsh
+  - nxspool
+  - nxssh
+  - nxssh-add
+  - nxssh-agent
+  - nxtunctl
+  - nxusbd
+NetConn:
+  Domains:
+  Ports:
+  - 4000
+  - 4022
+  - 4080
+  - 4443
