@@ -1,10 +1,10 @@
 Executables:
   SignerSubjectName: LogMeIn, Inc.
   Linux:
-  - # Needed
+  - null # Needed
   MacOS: 
-  - # Needed
-  MacOSSigner: # Needed
+  - null # Needed
+  MacOSSigner: null # Needed
   Windows:
   - g2tray.exe
   - g2comm.exe
