@@ -1,3 +1,8 @@
+# v1.2.0
+* Add SimpleHelp
+* Add GoToResolve (thanks @signifi3d)
+* Add GoToMyPic (thanks @signifi3d)
+
 # v1.1.0
 * add definition for `NoMachine`
 
