@@ -1,0 +1,16 @@
+Executables:
+    SignerSubjectName: SimpleHelp Ltd
+    MacOSSigner:
+    Windows:
+        - SimpleService.exe
+        - remoteaccesswinlauncher.exe
+        - \JWrapper-Remote Access\*
+        - Program Files\SimpleHelp\*
+    MacOS:
+        # NOTE: runs on JAVA by default on MacOS
+        - /Library/Application Support/JWrapper-Remote Access/*
+    Linux:
+        - /opt/JWrapper-Remote Access/*
+NetConn:
+    Domains:
+    Ports:
