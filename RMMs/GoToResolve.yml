@@ -1,5 +1,7 @@
 Executables:
   SignerSubjectName: LogMeIn, Inc.
+  MacOS:
+  Linux:
   Windows:
   - GoToResolveUnattended.exe
   - GoToResolveUnattendedUpdater.exe
