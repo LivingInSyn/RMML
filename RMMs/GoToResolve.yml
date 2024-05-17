@@ -1,5 +1,6 @@
 Executables:
   SignerSubjectName: LogMeIn, Inc.
+  MacOSSigner:
   MacOS:
   Linux:
   Windows:
