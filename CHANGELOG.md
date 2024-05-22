@@ -1,3 +1,6 @@
+# v1.3.0
+* Added quickassist.exe
+
 # v1.2.0
 * Add SimpleHelp
 * Add GoToResolve (thanks @signifi3d)
