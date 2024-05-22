@@ -1,0 +1,11 @@
+Executables:
+  SignerSubjectName:
+  MacOSSigner:
+  Windows:
+    - windows\system32\quickassist.exe
+    - Program Files\WindowsApps\MicrosoftCorporationII.QuickAssist_*
+  MacOS:
+  Linux:
+NetConn:
+  Domains:
+  Ports:
