@@ -1,0 +1,21 @@
+Executables:
+  SignerSubjectName: Nanosystems S.r.l.
+  MacOSSigner: Nanosystems S.r.l.
+  Windows:
+  - SupremoSystem.exe
+  - Supremo.exe
+  - SupremoHelper.exe
+  - \ProgramData\SupremoRemoteDesktop\*
+  MacOS:
+  - Supremo.dmg
+  - /Supremo.app/Contents/MacOS/Supremo
+  Linux:
+  - Supremo.exe
+NetConn:
+  Domains:
+  - '*.nanosystems.it'
+  - '*.supremocontrol.com'
+  Ports:
+  - 80
+  - 443
+  - 5938
