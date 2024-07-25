@@ -11,14 +11,16 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v3
-    - name: release
-      uses: actions/create-release@v1
-      id: create_release
+    - name: setup python
+      uses: actions/setup-python@v5
       with:
-        draft: false
-        prerelease: false
-        release_name: Release ${{ github.ref }}
-        tag_name: ${{ github.ref }}
-        body_path: CHANGELOG.md
+        python-version: '3.11' 
+    - name: execute py script # run file
+      run: |
+        python JsonOutput/JsonOutput.py
+    - name: release
+      uses: elgohr/Github-Release-Action@v5
+      with:
+        title: Release ${{ github.ref }}
       env:
         GITHUB_TOKEN: ${{ github.TOKEN }}
