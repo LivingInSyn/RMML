@@ -1,3 +1,7 @@
+# v1.4.0
+* Added meshagent
+* Added JSON to CI
+
 # v1.3.0
 * Added quickassist.exe
 
