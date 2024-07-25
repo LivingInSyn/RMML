@@ -1,0 +1,1 @@
+This python script is called during CI to add a JSON file to the release with all of the RMMs
