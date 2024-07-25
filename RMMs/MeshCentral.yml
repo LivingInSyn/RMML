@@ -1,0 +1,12 @@
+Executables:
+  SignerSubjectName: 
+  MacOSSigner:
+  Windows:
+  - MeshAgent.exe
+  MacOS:
+  - meshagent
+  Linux:
+  - meshagent
+NetConn:
+  Domains:
+  Ports:
