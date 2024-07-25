@@ -22,7 +22,7 @@ jobs:
         python JsonOutput/JsonOutput.py
     - name: create release
       run: |
-        gh release create -t $TITLE ./ci-output/rmms.json -F CHANGELOG.md
+        gh release create $TITLE ./ci-output/rmms.json -F CHANGELOG.md
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TITLE: ${{ github.ref_name }}
