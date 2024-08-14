@@ -8,4 +8,8 @@ Executables:
   Linux:
 NetConn:
   Domains:
+    - remoteassistance.support.services.microsoft.com
+    - *.support.services.microsoft.com
+    - remoteassistanceprodacs*
   Ports:
+    - 443
