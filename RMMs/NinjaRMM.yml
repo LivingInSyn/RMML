@@ -15,8 +15,6 @@ NetConn:
   - https://ninjauploads.s3.amazonaws.com/app.ninjarmm.com*
   - http://ninjaresources.s3.amazonaws.com/AgentBinaries/patchmgmt/
   - https://ninjabuilds.s3.amazonaws.com/
-  - http://s3-us-west-2.amazonaws.com/
-  - sentry.io*
   Ports:
   - 80
   - 443
