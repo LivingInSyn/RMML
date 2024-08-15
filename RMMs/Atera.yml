@@ -30,7 +30,6 @@ NetConn:
   - appcdn.atera.com
   - atera-agent-heartbeat-cus.servicebus.windows.net
   - ticketingitemsstoreeu.blob.core.windows.net
-  - download.visualstudio.microsoft.com
   - a32dl55qcodech-ats.iot.eu-west-1.amazonaws.com
   Ports:
   - 443
