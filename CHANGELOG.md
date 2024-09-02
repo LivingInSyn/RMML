@@ -1,3 +1,7 @@
+# v1.4.1
+* Updates on QuickAssist and Aterna definitions by @Korving-F
+* Typo fixed in TailScaleD by @ruppde
+
 # v1.4.0
 * Added meshagent
 * Added JSON to CI
