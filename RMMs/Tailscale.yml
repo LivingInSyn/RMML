@@ -11,7 +11,7 @@ Executables:
   - io.tailscale.ipn.macsys.network-extension
   Linux:
   - tailscale
-  - tailscald
+  - tailscaled
 NetConn:
   Domains:
   - '*.tailscale.com'
