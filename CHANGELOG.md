@@ -1,3 +1,7 @@
+# v1.5.0
+* Added a definition for VSCode tunnels
+
+
 # v1.4.1
 * Updates on QuickAssist and Aterna definitions by @Korving-F
 * Typo fixed in TailScaleD by @ruppde
