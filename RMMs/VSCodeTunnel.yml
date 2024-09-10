@@ -10,7 +10,7 @@ Executables:
     - code-tunnel*tunnel*
 NetConn:
   Domains:
-    - *.tunnels.api.visualstudio.com
-    - *.devtunnels.ms
+    - '*.tunnels.api.visualstudio.com'
+    - '*.devtunnels.ms'
   Ports:
     - 443
