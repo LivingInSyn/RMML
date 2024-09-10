@@ -1,0 +1,16 @@
+Executables:
+  SignerSubjectName: Microsoft Corporation
+  MacOSSigner: Microsoft Corporation (UBF8T346G9)
+  Windows:
+    - code.exe*tunnel
+    - code-tunnel.exe*tunnel*
+  MacOS:
+    - code-tunnel*tunnel*
+  Linux:
+    - code-tunnel*tunnel*
+NetConn:
+  Domains:
+    - *.tunnels.api.visualstudio.com
+    - *.devtunnels.ms
+  Ports:
+    - 443
