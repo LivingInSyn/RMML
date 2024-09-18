@@ -53,6 +53,8 @@ NetConn:
     Ports:
         - 443
         - 8080
+Meta:
+  ID: <a guid>
 ```
 
 Example (from `./RMMs/TeamViewer.yml`):
@@ -73,6 +75,8 @@ NetConn:
   - '*.teamviewer.com'
   Ports:
   - 5938
+Meta:
+  ID: 85F6550F-8693-4B68-A081-5DBDA0913014
 ```
 
 A blank to make life easy for creating PRs:
@@ -92,4 +96,6 @@ NetConn:
     - 
   Ports:
     - 443
+Meta:
+  ID: 
 ```
