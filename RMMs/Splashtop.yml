@@ -21,3 +21,5 @@ NetConn:
   - '*.splashtop.eu'
   Ports:
   - 443
+Meta:
+  ID: 532F8698-8390-4A8E-B9E6-DA244BEF341C

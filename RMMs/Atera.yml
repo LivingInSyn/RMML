@@ -33,3 +33,6 @@ NetConn:
   - a32dl55qcodech-ats.iot.eu-west-1.amazonaws.com
   Ports:
   - 443
+Meta:
+  ID: 8A1D7AE2-4613-49DB-B7DC-B6BCD88F48C7
+

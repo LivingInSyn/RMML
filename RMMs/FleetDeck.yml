@@ -17,3 +17,5 @@ NetConn:
   - fleetdm.com
   Ports:
   - 443
+Meta:
+  ID: 64B024F1-C219-497D-98E0-F2DD198B32F3

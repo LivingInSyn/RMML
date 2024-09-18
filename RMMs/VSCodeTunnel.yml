@@ -14,3 +14,5 @@ NetConn:
     - '*.devtunnels.ms'
   Ports:
     - 443
+Meta:
+  ID: 088B75D2-9CC5-4288-A695-2B05B46DCC72

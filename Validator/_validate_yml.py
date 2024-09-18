@@ -57,6 +57,7 @@ def check_netconn(r, nc):
             if not isinstance(p, (int)):
                 ERRORS.append(f'Found a non-int in {r} Ports. Value: {p}')
 
+IDs = set()
 for filename in os.listdir(RMMDIR):
     file = os.path.join(RMMDIR, filename)
     # checking if it is a file
@@ -72,6 +73,18 @@ for filename in os.listdir(RMMDIR):
             sys.exit(1)
         if 'NetConn' not in rmm:
             print(f'NetConn not defined in {rmm_name}')
+            sys.exit(1)
+        if 'Meta' not in rmm:
+            print(f'Meta not defined in {rmm_name}')
+            sys.exit(1)
+            # check the IDs
+        if 'ID' not in rmm['Meta']:
+            print(f'ID not defined in {rmm_name}, meta section')
+            sys.exit(1)
+        if rmm['Meta']['ID'] not in IDs:
+            IDs.add(rmm['Meta']['ID'])
+        else:
+            print(f'DUPLICATE ID defined in {rmm_name}, meta section')
             sys.exit(1)
         check_executables(rmm_name, rmm['Executables'])
         check_netconn(rmm_name, rmm['NetConn'])
