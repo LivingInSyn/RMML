@@ -14,3 +14,10 @@ NetConn:
   Domains: null
   Ports:
   - 443
+Meta:
+  ID: 9B9E5782-E7CC-4525-A933-427030E1725E
+  Description: NetSupport is an RMM 
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://www.netsupportsoftware.com/'

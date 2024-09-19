@@ -18,3 +18,10 @@ NetConn:
   - 50001
   - 50002
   - 50003
+Meta:
+  ID: de7dd0b8-b924-4a6a-b433-3428b529119a
+  Description: AnyDesk is a remote desktop tool
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://anydesk.com'

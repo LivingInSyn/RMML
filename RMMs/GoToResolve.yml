@@ -32,3 +32,10 @@ NetConn:
   Ports:
   - 3489
   - 443
+Meta:
+  ID: CCE2B119-8CBB-45CE-AFE8-5BA4D7057E3D
+  Description: GoToResolve is an RMM from goto
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://www.goto.com/it-management/resolve'

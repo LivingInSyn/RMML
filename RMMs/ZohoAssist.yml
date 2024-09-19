@@ -28,3 +28,10 @@ NetConn:
   Ports:
   - 80
   - 443
+Meta:
+  ID: 4D4BB5A6-CA27-499A-A6B4-3C7BE4971525
+  Description: Zoho assist is free remote assistance tool
+  Date: 2023-11-18
+  Modified: 2023-11-18
+  References:
+  - 'https://www.zoho.com/assist/'

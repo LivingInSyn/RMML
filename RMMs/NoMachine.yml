@@ -77,3 +77,10 @@ NetConn:
   - 4022
   - 4080
   - 4443
+Meta:
+  ID: 68305084-9944-462C-B3BF-ACD17D235EEB
+  Description: NoMachine is a remote desktop tool
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'www.nomachine.com'

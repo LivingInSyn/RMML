@@ -21,3 +21,11 @@ NetConn:
   UDPPorts:
   - 41641
   - 3478
+Meta:
+  ID: F5B51A06-5803-4AAF-AE63-CEAB89238BD7
+  Description: Tailscale is a VPN provider
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'tailscale.com'
+

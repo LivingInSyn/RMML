@@ -36,3 +36,10 @@ NetConn:
   - 443
   - 20
   - 21
+Meta:
+  ID: E37B1F63-542E-46EF-965C-92189AFFEA71
+  Description: N-Able is an RMM
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://www.n-able.com/'

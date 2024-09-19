@@ -11,3 +11,10 @@ NetConn:
   Domains: null
   Ports:
   - 443
+Meta:
+  ID: 47B135F7-39E8-4916-8793-ACC1160EC6E4
+  Description: Tactical RMM is a free RMM utility
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'tacticalrmm.com'
