@@ -15,3 +15,8 @@ NetConn:
     - 443
 Meta:
   ID: 1E21B1CA-DD6D-4505-9018-C9F8C3F40ACC
+  Description: quickassist is a tool from microsoft that can be used for remote control
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://support.microsoft.com/en-us/windows/install-quick-assist-c17479b7-a49d-4d12-938c-dbfb97c88bca'

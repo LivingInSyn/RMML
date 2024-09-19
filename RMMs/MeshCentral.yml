@@ -12,3 +12,8 @@ NetConn:
   Ports:
 Meta:
   ID: 55EC5C27-A1C8-473F-BE51-4979EC10A7DA
+  Description: MeshCentral allows for 'full computer management'
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://github.com/Ylianst/MeshCentral'

@@ -16,3 +16,8 @@ NetConn:
     - 443
 Meta:
   ID: 088B75D2-9CC5-4288-A695-2B05B46DCC72
+  Description: VSCode tunnels allow connection from remote hosts
+  Date: 2024-09-10
+  Modified: 2024-09-10
+  References:
+  - 'https://code.visualstudio.com/docs/remote/tunnels'

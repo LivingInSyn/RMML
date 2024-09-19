@@ -18,4 +18,8 @@ NetConn:
   - 443
 Meta:
   ID: 71D2CA02-3905-4DD7-AD0E-C5443F5AC81B
-
+  Description: ngrok is a tunneling tool
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'ngrok.com'

@@ -1,6 +1,7 @@
 import yaml
 import sys
 import os
+import datetime
 
 RMMDIR = './RMMs'
 OSES = ['Windows','MacOS','Linux']
@@ -57,6 +58,23 @@ def check_netconn(r, nc):
             if not isinstance(p, (int)):
                 ERRORS.append(f'Found a non-int in {r} Ports. Value: {p}')
 
+def check_meta(r, meta):
+    keys = ['ID', 'Description', 'Date', 'Modified', 'References']
+    for k in keys:
+        if k not in meta:
+            ERRORS.append(f'Missing key {k} in Meta on {r}')
+    if len(ERRORS) > 0:
+        return
+    if not isinstance(meta['Description'], str):
+        ERRORS.append(f"Description on {r} isn't a string")
+    if not isinstance(meta['Date'], datetime.date):
+        ERRORS.append(f"Date on {r} isn't a date")
+    if not isinstance(meta['Modified'], datetime.date):
+        ERRORS.append(f"Modified on {r} isn't a date")
+    if not isinstance(meta['References'], list):
+        ERRORS.append(f"References on {r} isn't a list")
+
+
 IDs = set()
 for filename in os.listdir(RMMDIR):
     file = os.path.join(RMMDIR, filename)
@@ -88,6 +106,7 @@ for filename in os.listdir(RMMDIR):
             sys.exit(1)
         check_executables(rmm_name, rmm['Executables'])
         check_netconn(rmm_name, rmm['NetConn'])
+        check_meta(rmm_name, rmm['Meta'])
 if len(ERRORS) == 0:
     sys.exit(0)
 else:

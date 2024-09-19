@@ -35,4 +35,8 @@ NetConn:
   - 443
 Meta:
   ID: 8A1D7AE2-4613-49DB-B7DC-B6BCD88F48C7
-
+  Description: Atera is a RMM solution
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://www.atera.com'

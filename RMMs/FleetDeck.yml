@@ -19,3 +19,8 @@ NetConn:
   - 443
 Meta:
   ID: 64B024F1-C219-497D-98E0-F2DD198B32F3
+  Description: FleetDeck is a remote desktop and remote terminal solution
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://fleetdeck.io'

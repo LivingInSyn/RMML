@@ -23,3 +23,8 @@ NetConn:
   - 443
 Meta:
   ID: 532F8698-8390-4A8E-B9E6-DA244BEF341C
+  Description: Splashtop is a remote access tool
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'splashtop.com'

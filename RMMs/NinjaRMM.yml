@@ -20,3 +20,8 @@ NetConn:
   - 443
 Meta:
   ID: 3507D8B2-6C1B-4468-9057-6F17703EE0D4
+  Description: NinjaRMM is a RMM
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://www.ninjaone.com/'

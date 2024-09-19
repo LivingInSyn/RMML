@@ -24,3 +24,8 @@ NetConn:
   - 443
 Meta:
   ID: 48D7D443-787B-431C-A528-5BA5C2C75301
+  Description: GoToMyPC is a remote desktop solution
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://get.gotomypc.com/'
