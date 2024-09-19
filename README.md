@@ -55,6 +55,11 @@ NetConn:
         - 8080
 Meta:
   ID: <a guid>
+  Description: A description of the RMM/access tool
+  Date: YYYY-MM-DD
+  Modified: YYYY-MM-DD
+  References:
+  - https://Some_Link.com
 ```
 
 Example (from `./RMMs/TeamViewer.yml`):
@@ -77,6 +82,11 @@ NetConn:
   - 5938
 Meta:
   ID: 85F6550F-8693-4B68-A081-5DBDA0913014
+  Description: Teamviewer allows for remote connections to a machine
+  Date: 2023-11-18
+  Modified: 2023-11-18
+  References:
+  - 'https://www.teamviewer.com/en-us/'
 ```
 
 A blank to make life easy for creating PRs:
@@ -97,5 +107,10 @@ NetConn:
   Ports:
     - 443
 Meta:
-  ID: 
+  ID:
+  Description:
+  Date:
+  Modified:
+  References:
+  - ''
 ```
