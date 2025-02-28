@@ -1,0 +1,38 @@
+Executables:
+    SignerSubjectName: Google LLC
+    MacOSSigner: Google LLC 
+    Windows:
+        - remote_assistance_host.exe
+        - remote_assistance_host_uiaccess.exe
+        - remote_open_url.exe
+        - remote_security_key.exe
+        - remote_webauthn.exe
+        - remoting_desktop.exe
+        - remoting_host.exe
+        - remoting_native_messaging_host.exe
+        - remoting_start_host.exe
+        - chromeremotedesktophost.msi
+    MacOS:
+        - chromeremotedesktop.dmg
+        - RemoteAssistanceHost.app
+        - NativeMessagingHost.app
+        - remoting_me2me_host
+        - remoting_me2me_host_service
+    Linux:
+        - chrome-remote-desktop
+        - chrome-remote-desktop-host
+        - configure-url-fowarder
+        - crash-uploader
+        - is-remoting-session
+        - native-messaging-host
+        - remote-assistance-host
+        - remote-open-url
+        - remote-webauthn
+        - start-host
+        - user-session
+NetConn:
+    Domains:
+        - remotedesktop.google.com
+    Ports:
+        - 443
+        - 3478
