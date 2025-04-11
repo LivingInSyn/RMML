@@ -1,6 +1,7 @@
 import yaml
 import json
 import os
+import logging
 
 RMMDIR = './RMMs'
 OUTDIR = './ci-output'
@@ -8,6 +9,7 @@ OUTFILE = f'{OUTDIR}/rmms.json'
 
 rmms = {}
 for filename in os.listdir(RMMDIR):
+    logging.warning('Processing RMM: %s', filename)
     file = os.path.join(RMMDIR, filename)
     if os.path.isfile(file):
         with open(file, 'r') as f:
@@ -18,5 +20,5 @@ for filename in os.listdir(RMMDIR):
 if not os.path.exists(OUTDIR):
     os.mkdir(OUTDIR)
 with open(OUTFILE, 'w') as f:
-    f.write(json.dumps(rmms, indent=2))
+    f.write(json.dumps(rmms, indent=2, default=str))
 
