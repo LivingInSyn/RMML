@@ -1,0 +1,28 @@
+Executables:
+  Linux:
+  MacOS:
+  - JumpConnect
+  MacOSSigner: null
+  SignerSubjectName: Phase Five Systems
+  Windows:
+  - jumpclient.exe
+  - jumpdesktop.exe
+  - jumpservice.exe
+  - jumpconnect.exe
+  - jumpupdater.exe
+NetConn:
+  Domains:
+  - '*.jumpdesktop.com'
+  - 'jumpdesktop.com'
+  - 'jumpto.me'
+  - '*.jumpto.me'
+  Ports:
+  - 80
+  - 443
+Meta:
+  ID: 1d6babd2-d71c-4b41-8786-47da58ba58ce
+  Description: Jump Connect is a remote desktop tool
+  Date: 2025-04-11
+  Modified: 2025-04-11
+  References:
+  - 'https://support.jumpdesktop.com/hc/en-us/articles/360042490351-Administrators-Guide-For-Jump-Desktop-Connect'
