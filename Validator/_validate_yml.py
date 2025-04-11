@@ -2,6 +2,7 @@ import yaml
 import sys
 import os
 import datetime
+import json
 
 RMMDIR = './RMMs'
 OSES = ['Windows','MacOS','Linux']
@@ -74,6 +75,12 @@ def check_meta(r, meta):
     if not isinstance(meta['References'], list):
         ERRORS.append(f"References on {r} isn't a list")
 
+def check_serialize(r, rmm_test):
+    try:
+        _jout = json.dumps(rmm_test, indent=2, default=str)
+    except Exception as ex: # pylint: disable=broad-except
+        ERRORS.append(f'Couldnt JSON serialize RMM: {r}! Exception: {ex}')
+
 
 IDs = set()
 for filename in os.listdir(RMMDIR):
@@ -107,6 +114,7 @@ for filename in os.listdir(RMMDIR):
         check_executables(rmm_name, rmm['Executables'])
         check_netconn(rmm_name, rmm['NetConn'])
         check_meta(rmm_name, rmm['Meta'])
+        check_serialize(rmm_name, rmm)
 if len(ERRORS) == 0:
     sys.exit(0)
 else:
