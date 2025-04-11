@@ -75,11 +75,17 @@ for filename in os.listdir(RMMDIR):
                 # detection is next
                 no_wildcards = []
                 has_wildcards = []
-                for exe in rmm['Executables']['Windows']:
-                    if '*' not in exe:
-                        no_wildcards.append(exe)
-                    else:
-                        has_wildcards.append(exe)
+                if filename == 'GoToMyPC.yml':
+                    a = 'foo'
+                for eos in ['Windows', 'MacOS', 'Linux']:
+                    if eos not in rmm['Executables'] or not rmm['Executables'][eos]:
+                        logging.info('RMM %s doesn\'t have OS: %s', filename, eos)
+                        continue
+                    for exe in rmm['Executables'][eos]:
+                        if '*' not in exe:
+                            no_wildcards.append(exe)
+                        else:
+                            has_wildcards.append(exe)
                 rmm_sigma['detection'] = {}
                 rmm_sigma['detection']['selection1'] = {"Image|endswith": no_wildcards}
                 if len(has_wildcards) == 0:
@@ -93,7 +99,7 @@ for filename in os.listdir(RMMDIR):
                 # add to the output
                 sigmas.append(rmm_sigma)
     except Exception as e:
-        logging.warning(f"Error transforming {filename}. Error: {e}")
+        logging.warning("Error transforming %s. Error: %s", filename, e)
 
 if not os.path.exists(OUTDIR):
     os.mkdir(OUTDIR)
