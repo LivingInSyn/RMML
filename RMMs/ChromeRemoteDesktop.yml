@@ -36,3 +36,10 @@ NetConn:
     Ports:
         - 443
         - 3478
+Meta:
+  ID: 69c85e30-48c9-4072-937a-c467e2511eeb
+  Description: Chrome Remote Desktop is a chrome plugin that provides remote access
+  Date: 2024-10-21
+  Modified: 2024-10-21
+  References:
+  - 'https://chromewebstore.google.com/detail/chrome-remote-desktop/inomeogfingihgjfjlpeplalcfajhgai?hl=en'
