@@ -2,6 +2,7 @@ import yaml
 import json
 import os
 import logging
+import copy
 
 RMMDIR = './RMMs'
 OUTDIR = './ci-output/sigma'
@@ -48,20 +49,19 @@ sigma_template = {
     "level": "medium",
 }
 
-
-
-sigmas = []
-ids = []
-for filename in os.listdir(RMMDIR):
+def generate_sigma(eos, filename):
     try:
         file = os.path.join(RMMDIR, filename)
         if os.path.isfile(file):
             with open(file, 'r') as f:
                 rmm = yaml.safe_load(f)
-                rmm_sigma = sigma_template.copy()
+                if eos not in rmm['Executables'] or not rmm['Executables'][eos]:
+                    logging.info('RMM %s doesn\'t have OS: %s', filename, eos)
+                    return
+                rmm_sigma = copy.deepcopy(sigma_template)
                 rmm_name = file.removeprefix(RMMDIR).removesuffix('.yml').removesuffix('.yaml')[1:]
-                rmm_sigma['title'] = f'RMML-{rmm_name}'
-                rmm_sigma['id'] = rmm['Meta']['ID']
+                rmm_sigma['title'] = f'RMML-{rmm_name}-{eos}'
+                rmm_sigma['id'] = f"{rmm['Meta']['ID']}-{eos.lower()}"
                 # add to a list of IDs so that we can add it to all of them when
                 # we're done building the base ('related')
                 ids.append(rmm_sigma['id'])
@@ -70,22 +70,15 @@ for filename in os.listdir(RMMDIR):
                 rmm_sigma['date'] = rmm['Meta']['Date']
                 rmm_sigma['modified'] = rmm['Meta']['Modified']
                 # no change to tags, maybe later
-                # right now we're only doing windows, so leave logsource alone
-                
+                rmm_sigma['logsource']['product'] = eos.lower()
                 # detection is next
                 no_wildcards = []
                 has_wildcards = []
-                if filename == 'GoToMyPC.yml':
-                    a = 'foo'
-                for eos in ['Windows', 'MacOS', 'Linux']:
-                    if eos not in rmm['Executables'] or not rmm['Executables'][eos]:
-                        logging.info('RMM %s doesn\'t have OS: %s', filename, eos)
-                        continue
-                    for exe in rmm['Executables'][eos]:
-                        if '*' not in exe:
-                            no_wildcards.append(exe)
-                        else:
-                            has_wildcards.append(exe)
+                for exe in rmm['Executables'][eos]:
+                    if '*' not in exe:
+                        no_wildcards.append(exe)
+                    else:
+                        has_wildcards.append(exe)
                 rmm_sigma['detection'] = {}
                 rmm_sigma['detection']['selection1'] = {"Image|endswith": no_wildcards}
                 if len(has_wildcards) == 0:
@@ -97,9 +90,20 @@ for filename in os.listdir(RMMDIR):
                 # no change to level
                 
                 # add to the output
-                sigmas.append(rmm_sigma)
+                return rmm_sigma
+                
     except Exception as e:
         logging.warning("Error transforming %s. Error: %s", filename, e)
+        return None
+
+
+sigmas = []
+ids = []
+for filename in os.listdir(RMMDIR):
+    for eos in ['Windows', 'MacOS', 'Linux']:
+        rmm_sigma = generate_sigma(eos, filename)
+        if rmm_sigma:
+            sigmas.append(rmm_sigma)
 
 if not os.path.exists(OUTDIR):
     os.mkdir(OUTDIR)
