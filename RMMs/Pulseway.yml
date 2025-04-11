@@ -13,3 +13,11 @@ NetConn:
   - pulseway.com
   Ports:
   - 443
+Meta:
+  ID: 436E7F78-12D3-4379-A6E6-870671F95590
+  Description: Pulseway is a RMM
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://www.pulseway.com/'
+  

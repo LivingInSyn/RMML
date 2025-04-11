@@ -19,3 +19,10 @@ NetConn:
   - 80
   - 443
   - 5938
+Meta:
+  ID: 506CBD0D-4A9C-43D6-AE13-301CA4E0EF49
+  Description: Supremo is a remote access tool
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://www.supremocontrol.com/'

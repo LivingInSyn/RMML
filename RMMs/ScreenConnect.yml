@@ -22,3 +22,10 @@ NetConn:
   - 80
   - 443
   - 8041
+Meta:
+  ID: 0B1D916C-A462-4BC9-A0D7-B416DF45E8A6
+  Description: Screenconnect is a remote access tool from connectwise
+  Date: 2024-09-19
+  Modified: 2024-09-19
+  References:
+  - 'https://screenconnect.connectwise.com/'

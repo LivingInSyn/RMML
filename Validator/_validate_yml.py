@@ -1,6 +1,7 @@
 import yaml
 import sys
 import os
+import datetime
 
 RMMDIR = './RMMs'
 OSES = ['Windows','MacOS','Linux']
@@ -57,6 +58,24 @@ def check_netconn(r, nc):
             if not isinstance(p, (int)):
                 ERRORS.append(f'Found a non-int in {r} Ports. Value: {p}')
 
+def check_meta(r, meta):
+    keys = ['ID', 'Description', 'Date', 'Modified', 'References']
+    for k in keys:
+        if k not in meta:
+            ERRORS.append(f'Missing key {k} in Meta on {r}')
+    if len(ERRORS) > 0:
+        return
+    if not isinstance(meta['Description'], str):
+        ERRORS.append(f"Description on {r} isn't a string")
+    if not isinstance(meta['Date'], datetime.date):
+        ERRORS.append(f"Date on {r} isn't a date")
+    if not isinstance(meta['Modified'], datetime.date):
+        ERRORS.append(f"Modified on {r} isn't a date")
+    if not isinstance(meta['References'], list):
+        ERRORS.append(f"References on {r} isn't a list")
+
+
+IDs = set()
 for filename in os.listdir(RMMDIR):
     file = os.path.join(RMMDIR, filename)
     # checking if it is a file
@@ -73,8 +92,21 @@ for filename in os.listdir(RMMDIR):
         if 'NetConn' not in rmm:
             print(f'NetConn not defined in {rmm_name}')
             sys.exit(1)
+        if 'Meta' not in rmm:
+            print(f'Meta not defined in {rmm_name}')
+            sys.exit(1)
+            # check the IDs
+        if 'ID' not in rmm['Meta']:
+            print(f'ID not defined in {rmm_name}, meta section')
+            sys.exit(1)
+        if rmm['Meta']['ID'] not in IDs:
+            IDs.add(rmm['Meta']['ID'])
+        else:
+            print(f'DUPLICATE ID defined in {rmm_name}, meta section')
+            sys.exit(1)
         check_executables(rmm_name, rmm['Executables'])
         check_netconn(rmm_name, rmm['NetConn'])
+        check_meta(rmm_name, rmm['Meta'])
 if len(ERRORS) == 0:
     sys.exit(0)
 else:

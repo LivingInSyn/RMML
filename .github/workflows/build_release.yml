@@ -20,9 +20,11 @@ jobs:
     - name: execute py script # run file
       run: |
         python JsonOutput/JsonOutput.py
+        python SigmaOutput/SigmaOutput.py
+        zip -r ./ci-output/sigma_rules.zip ./ci-output/sigma
     - name: create release
       run: |
-        gh release create $TITLE ./ci-output/rmms.json -F CHANGELOG.md
+        gh release create $TITLE ./ci-output/rmms.json ./ci-output/sigma_rules.zip -F CHANGELOG.md
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TITLE: ${{ github.ref_name }}
