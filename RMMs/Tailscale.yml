@@ -1,5 +1,5 @@
 Executables:
-  SignerSubjectName: TeamViewer GmbH
+  SignerSubjectName: Tailscale Inc.
   MacOSSigner: 'Apple Mac OS Application Signing' # This is what I pulled :shrug:
   Windows:
   - tailscale.exe
@@ -25,7 +25,7 @@ Meta:
   ID: F5B51A06-5803-4AAF-AE63-CEAB89238BD7
   Description: Tailscale is a VPN provider
   Date: 2024-09-19
-  Modified: 2024-09-19
+  Modified: 2025-05-21
   References:
   - 'tailscale.com'
 
