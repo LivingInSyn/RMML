@@ -4,6 +4,7 @@ Executables:
   Windows:
   - TeamViewer.exe
   - TeamViewer_Setup.exe
+  - TeamViewer_Service.exe
   MacOS:
   - TeamViewer
   Linux:
