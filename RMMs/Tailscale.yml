@@ -1,5 +1,5 @@
 Executables:
-  SignerSubjectName: Tailscale Inc.
+  SignerSubjectName: 'io.tailscale.ipn.macos'
   MacOSSigner: 'Apple Mac OS Application Signing' # This is what I pulled :shrug:
   Windows:
   - tailscale.exe
