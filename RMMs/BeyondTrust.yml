@@ -1,0 +1,34 @@
+Executables:
+    SignerSubjectName: Bomgar Corporation 
+    MacOSSigner: <MacOS code signing name>
+    Windows:
+        - bomgar-scc.exe 
+        - bomgar-scc-0x*.exe
+        - sra-scc.exe
+        - bombgar-rdp.exe
+        - bombgar-pac.exe
+        - bombgar-pac-*.exe
+    MacOS:
+        - sdcust 
+        - bomgar-scc
+        - bomgar-scc-0x*
+    Linux:
+        - sdcust 
+        - bomgar-scc
+        - bomgar-scc-0x*
+NetConn:
+    Domains:
+        - btupdate.com
+        - "gwsupport.bomgar.com"
+        - beyondtrustcloud.com
+        - "*.beyondtrustcloud.com"
+    Ports:
+        - 443
+        - 8080
+Meta:
+  ID: 85C17E64-20D8-4B4C-AEFC-FFC68D32D67B
+  Description: BeyondTrust and Bombgar remote support tool
+  Date: 2025-11-08
+  Modified: 2025-11-08
+  References:
+  - https://www.beyondtrust.com/brand/bomgar
