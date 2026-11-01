@@ -1,0 +1,23 @@
+Executables:
+  Linux: null
+  MacOS: null
+  MacOSSigner: null
+  SignerSubjectName: null
+  Windows:
+  - Nizlo.Agent.exe
+  - Nizlo.Agent.Updater.exe
+  - Nizlo.RemoteBridge.exe
+NetConn:
+  Domains:
+  - app.nizlo.com
+  Ports:
+  - 443
+Meta:
+  ID: 375F7CDB-67E7-4E91-899E-C11016B989E1
+  Description: Nizlo is a legitimate Windows-first RMM for MSPs and IT teams; its artifacts alone do not indicate malicious use
+  Date: 2026-11-01
+  Modified: 2026-11-01
+  References:
+  - 'https://nizlo.com/downloads'
+  - 'https://nizlo.com/remote-management'
+  - 'https://nizlo.com/security'
