@@ -1,0 +1,33 @@
+Executables:
+  Linux:
+  - Nizlo.Agent.Linux
+  MacOS:
+  - Nizlo.Agent.Mac
+  - NizloRemote
+  MacOSSigner: null
+  SignerSubjectName: Cloud 84 Holdings, LLC
+  Windows:
+  - Nizlo.Agent.exe
+  - Nizlo.Agent.Updater.exe
+  - Nizlo.RemoteBridge.exe
+  - NizloRemote.exe
+NetConn:
+  Domains:
+  - app.nizlo.com
+  - remote.nizlo.com
+  Ports:
+  - 443
+  - 21115
+  - 21116
+  - 21117
+Meta:
+  ID: 375F7CDB-67E7-4E91-899E-C11016B989E1
+  Description: Nizlo is a legitimate Windows-first RMM for MSPs and IT teams; its artifacts alone do not indicate malicious use
+  Date: 2026-11-01
+  Modified: 2026-11-06
+  References:
+  - 'https://nizlo.com/guides/nizlo-rmm-security-indicators'
+  - 'https://izikipizi.github.io/nizlo-security-indicators/indicators.csv'
+  - 'https://nizlo.com/downloads'
+  - 'https://nizlo.com/remote-management'
+  - 'https://nizlo.com/security'
